@@ -10,13 +10,17 @@ Action
 GameState
 	Состояние игры, разделено на несколько подклассов:
 	- Grid
-	- Modifications - коллекция Modification
+	- ModificationsPipeline
 	- History
 	- Message
 	- IsGameOver
 
 Grid
 	Игровая сетка, хранит информацию о содержимом ячеек.
+
+ModificationsPipeline
+	Набор объектов Modification, реализующих паттерн Pipeline. Каждый из объектов в конвейере получает на вход старый и новый GameState,
+	при выполнении условия модифицирует новый GameState, и передает старый и новый GameState следующему объекту Modification в конвейере.
 
 Modification
 	Отвечает за расширение игрового поведения. Содержит Action и условие его активации.
