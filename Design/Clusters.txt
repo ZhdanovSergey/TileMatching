@@ -1,0 +1,16 @@
+На данный момент в проекте планируется 10 классов, и я плохо себе представляю как и зачем такое небольшое количество разделять на кластеры.
+Пусть кластеры будут такими:
+
+I/O
+	InputHandler
+	Renderer
+
+GameState
+	Grid
+	ModificationsPipeline
+	History
+
+Entities
+	Move
+	Modification
+	Figure
